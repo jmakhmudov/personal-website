@@ -1,9 +1,8 @@
+import { Face } from '@/components/Face'
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Suspense } from 'react'
 
 export default function Home() {
   return (
@@ -14,8 +13,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <h1>Hello World!</h1>
+      <main className="main">
+        <Canvas className='canvas' style={{ height: '100vh', background: 'black' }}>
+          <ambientLight intensity={1} />
+          <directionalLight position={[1, 1, 1]} intensity={1} color={'#0080FE'}/>
+          <directionalLight position={[2, -10, 2]} intensity={1} color={'#0080FE'}/>
+          <directionalLight position={[-1, -1, -1]} intensity={1} color={'#0080FE'}/>
+          <directionalLight position={[-10, 0, -2]} intensity={1} color={'#0080FE'}/>
+          <directionalLight position={[5, -10, 2]} intensity={1} color={'#0080FE'}/>
+          <pointLight position={[0, -5, 0]} intensity={1} color={'#0080FE'}/>
+          <hemisphereLight position={[1, 1, 1]} intensity={1} color={'#0080FE'}/>
+          <OrbitControls autoRotateSpeed={5} target={[0, 0, -2]} autoRotate={true} enableDamping={false} enablePan={false} enableRotate={true} enableZoom={false}/>
+          <Face />
+        </Canvas>
       </main>
     </>
   )
