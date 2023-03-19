@@ -1,8 +1,8 @@
 import { Face } from '@/components/Face'
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import Head from 'next/head'
-import { Suspense } from 'react'
+import Navbar from '@/components/Navbar'
 
 export default function Home() {
   return (
@@ -14,18 +14,43 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="main">
-        <Canvas className='canvas' style={{ height: '100vh', background: 'black' }}>
+        <Navbar />
+        <Canvas className='canvas' style={{ height: '100dvh'}}>
           <ambientLight intensity={1} />
-          <directionalLight position={[1, 1, 1]} intensity={1} color={'#0080FE'}/>
-          <directionalLight position={[2, -10, 2]} intensity={1} color={'#0080FE'}/>
-          <directionalLight position={[-1, -1, -1]} intensity={1} color={'#0080FE'}/>
-          <directionalLight position={[-10, 0, -2]} intensity={1} color={'#0080FE'}/>
-          <directionalLight position={[5, -10, 2]} intensity={1} color={'#0080FE'}/>
-          <pointLight position={[0, -5, 0]} intensity={1} color={'#0080FE'}/>
-          <hemisphereLight position={[1, 1, 1]} intensity={1} color={'#0080FE'}/>
+          <directionalLight position={[1, 1, 1]} intensity={1} color={'#2593FF'}/>
+          <directionalLight position={[2, -10, 2]} intensity={1} color={'#2593FF'}/>
+          <directionalLight position={[-1, -1, -1]} intensity={1} color={'#2593FF'}/>
+          <directionalLight position={[-10, 0, -2]} intensity={1} color={'#2593FF'}/>
+          <directionalLight position={[5, -10, 2]} intensity={1} color={'#2593FF'}/>
+          <directionalLight position={[5, -3, 10]} intensity={1} color={'#2593FF'}/>
+          <spotLight position={[0, 3, 0]} intensity={1} color={'#2593FF'}/>
+          <pointLight position={[0, 0, 0]} intensity={1} color={'#2593FF'}/>
+          <hemisphereLight position={[1, 1, 1]} intensity={1} color={'#2593FF'}/>
           <OrbitControls autoRotateSpeed={5} target={[0, 0, -2]} autoRotate={true} enableDamping={false} enablePan={false} enableRotate={true} enableZoom={false}/>
           <Face />
         </Canvas>
+
+        <section className="footer-main">
+          <section className="info-box">
+            <div className="profession">
+              Frontend Developer
+            </div>
+
+            <div className='location'>
+              From <span>Tashkent</span>
+            </div>
+          </section>
+
+          <section className="social-links">
+            <div>
+              github
+            </div>
+
+            <div>
+              tel
+            </div>
+          </section>
+        </section>
       </main>
     </>
   )
