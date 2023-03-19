@@ -26,7 +26,7 @@ export default function Home() {
           <spotLight position={[0, 3, 0]} intensity={1} color={'#2593FF'}/>
           <pointLight position={[0, 0, 0]} intensity={1} color={'#2593FF'}/>
           <hemisphereLight position={[1, 1, 1]} intensity={1} color={'#2593FF'}/>
-          <OrbitControls autoRotateSpeed={5} target={[0, 0, -2]} autoRotate={true} enableDamping={false} enablePan={false} enableRotate={true} enableZoom={false}/>
+          <OrbitControls autoRotateSpeed={5} target={[0, 0, -2]} autoRotate={true} enableDamping={true} enablePan={false} enableRotate={true} enableZoom={false}/>
           <Face />
         </Canvas>
 
