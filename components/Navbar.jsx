@@ -24,7 +24,7 @@ export default function Navbar() {
                 </Link>
             </section>
 
-            <div>
+            <div className="menu-bar">
                 <FontAwesomeIcon icon={faBars} size='xl' />
             </div>
 
