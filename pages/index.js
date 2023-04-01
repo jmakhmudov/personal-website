@@ -19,6 +19,7 @@ export default function Home() {
       </Head>
       <main className="main">
         <Navbar />
+        
         <Canvas className='canvas' style={{ height: '100dvh' }}>
           <ambientLight intensity={1} />
           <directionalLight position={[1, 1, 1]} intensity={1} color={'#2593FF'} />
@@ -51,11 +52,11 @@ export default function Home() {
             </Link>
 
             <Link target='_blank' href='https://www.linkedin.com/in/jaloliddin-makhmudov-935643229/'>
-              <FontAwesomeIcon icon={faLinkedin} size='xl'/>
+              <FontAwesomeIcon icon={faLinkedin} size='xl' />
             </Link>
 
             <Link href=''>
-            <FontAwesomeIcon icon={faTelegram} size='xl'/>
+              <FontAwesomeIcon icon={faTelegram} size='xl' />
             </Link>
           </section>
         </section>

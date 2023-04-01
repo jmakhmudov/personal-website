@@ -1,4 +1,6 @@
-import Link from "next/link"
+import Link from "next/link";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Navbar() {
 
@@ -21,6 +23,10 @@ export default function Navbar() {
                     Contacts
                 </Link>
             </section>
+
+            <div>
+                <FontAwesomeIcon icon={faBars} size='xl' />
+            </div>
 
             <div className="my-name">
                 <span>JALOLIDDIN</span>

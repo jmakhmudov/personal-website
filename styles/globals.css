@@ -10,10 +10,11 @@
 
 body {
   background-color: black;
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100dvw;
   height: 100dvh;
   max-height: 100dvh;
+  font-family: sans-serif;
 }
 
 a {
