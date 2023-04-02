@@ -1,8 +1,6 @@
 import Head from "next/head"
 import Navbar from '../components/Navbar'
 import Blob from '../components/Blob'
-import { faReact, faHtml5, faCss3, faJs, faFigma } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function About() {
 
@@ -19,7 +17,7 @@ export default function About() {
                 <section className="section-box">
                     <section className="about-box">
                         <div className="title">About me</div>
-                        <p>Hello, my name is Jaloliddin and I am a Frontend Developer. Ever since I was a child, I've always dreamt of creating something that is both useful and interesting to people. That's why I chose to pursue a career in software development.</p>
+                        <p>Hello, my name is Jaloliddin and I am a Frontend Developer. Ever since I was a child, I&apos;ve always dreamt of creating something that is both useful and interesting to people. That&apos;s why I chose to pursue a career in software development.</p>
                         <p>Currently, I am studying at INHA University in Tashkent as a Software Developer. This field is constantly evolving, which means there is always something new to learn and explore.</p>
                         <p>I am excited to see where this journey takes me, and I am committed to working hard and putting in the effort required to achieve my dream of creating something truly amazing and useful for people.</p>
                     </section>
