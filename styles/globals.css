@@ -43,3 +43,9 @@ span {
 p {
   color: rgb(177, 177, 177);
 }
+
+@media screen and (max-width: 680px) {
+  body {
+    overflow-y: scroll;
+  }
+}
