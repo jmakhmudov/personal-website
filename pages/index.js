@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
       <main className="main">
         <Navbar />
-        
+
         <Canvas className='canvas' style={{ height: '100dvh' }}>
           <ambientLight intensity={1} />
           <directionalLight position={[1, 1, 1]} intensity={1} color={'#2593FF'} />
@@ -37,6 +37,12 @@ export default function Home() {
 
         <section className="footer-main">
           <section className="info-box">
+            <div className="my-name-mobile">
+              <span>JALOLIDDIN</span>
+              <br />
+              MAKHMUDOV
+            </div>
+
             <div className="profession">
               Frontend Developer
             </div>
@@ -47,7 +53,7 @@ export default function Home() {
           </section>
 
           <section className="social-links">
-            <Link href='https://github.com/jmakhmudov'>
+            <Link target='_blank' href='https://github.com/jmakhmudov'>
               <FontAwesomeIcon icon={faGithub} size='xl' />
             </Link>
 
@@ -55,7 +61,7 @@ export default function Home() {
               <FontAwesomeIcon icon={faLinkedin} size='xl' />
             </Link>
 
-            <Link href=''>
+            <Link target='_blank' href='https://telegram.me/ovestellar'>
               <FontAwesomeIcon icon={faTelegram} size='xl' />
             </Link>
           </section>

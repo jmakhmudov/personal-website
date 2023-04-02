@@ -42,6 +42,32 @@ nav {
     z-index: 100;
 }
 
+.nav-links-box {
+    width: 100dvw;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: -100dvw;
+    transition: 0.5s;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 5vw;
+}
+
+.nav-links-box {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+}
+
+.nav-links-box>a {
+    margin-bottom: 25px;
+}
+
 .menu-bar {
     display: none;
 }
@@ -64,7 +90,8 @@ nav {
 }
 
 
-.my-name {
+.my-name,
+.my-name-mobile {
     color: #0080FE;
     font-weight: 700;
     font-size: 28px;
@@ -72,7 +99,13 @@ nav {
     text-align: right;
 }
 
-.my-name>span {
+.my-name-mobile {
+    display: none;
+    text-align: center;
+}
+
+.my-name>span,
+.my-name-mobile>span {
     font-weight: 400;
 }
 
@@ -118,6 +151,15 @@ nav {
 
 .contacts-box>div {
     color: white;
+    display: grid;
+    place-items: center;
+}
+
+.contacts-box>div span {
+    color: rgb(190, 190, 190);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 5px;
 }
 
 .title {
@@ -126,7 +168,7 @@ nav {
     margin-bottom: 20px;
 }
 
-.part-box, 
+.part-box,
 .about-box {
     width: 40vw;
     margin-bottom: 50px;
@@ -140,9 +182,11 @@ nav {
 
 .skills-box {
     width: 50vw;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+    grid-auto-flow: column;
     align-items: center;
-    justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 .skills-box>div {
@@ -155,16 +199,18 @@ nav {
 }
 
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 680px) {
 
     .my-name,
     .nav-links,
     .social-links,
-    #blob {
+    #blob,
+    .location {
         display: none;
     }
 
-    .menu-bar {
+    .menu-bar,
+    .my-name-mobile {
         display: block;
     }
 
@@ -177,4 +223,19 @@ nav {
         text-align: center;
     }
 
+    .profession {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .about-box {
+        width: 90vw;
+    }
+
+    .skills-box {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-rows: repeat(2, 1fr);
+        grid-auto-flow: row;
+    }
 }

@@ -19,6 +19,7 @@ export default function Contact() {
                 <Navbar />
                 <section className="contacts-box">
                     <div>
+                        <span>Contact me via</span>
                         makhmudov@tuta.io
                     </div>
                 </section>
