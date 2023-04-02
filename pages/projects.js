@@ -14,7 +14,9 @@ export default function Projects() {
             </Head>
             <main className="main">
                 <Navbar />
-                
+                <section className="section-box">
+                    <div className="title">Projects</div>
+                </section>
                 <Blob />
             </main>
         </>

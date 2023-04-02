@@ -110,25 +110,57 @@ nav {
 
 .contacts-box {
     display: grid;
-    place-content: center;
+    place-items: center;
     height: 100dvh;
     font-size: 32px;
     font-weight: 700;
 }
 
 .contacts-box>div {
-    color: black;
-    transition: 0.5s;
-}
-
-.contacts-box>div:hover {
     color: white;
 }
 
+.title {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.part-box, 
+.about-box {
+    width: 40vw;
+    margin-bottom: 50px;
+}
+
+.part-box p,
+.about-box p {
+    line-height: 150%;
+    margin-bottom: 10px;
+}
+
+.skills-box {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills-box>div {
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.skills-box>div:hover {
+    color: #0080FE;
+}
+
+
 @media screen and (max-width: 479px) {
+
     .my-name,
-    .nav-links, 
-    .social-links {
+    .nav-links,
+    .social-links,
+    #blob {
         display: none;
     }
 
@@ -141,7 +173,7 @@ nav {
         padding-bottom: 50px;
     }
 
-    .footer-main > .info-box {
+    .footer-main>.info-box {
         text-align: center;
     }
 

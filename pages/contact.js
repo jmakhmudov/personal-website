@@ -1,6 +1,9 @@
 import Head from "next/head"
 import Navbar from '../components/Navbar'
 import Blob from '../components/Blob'
+import Link from "next/link"
+import { faGithub, faLinkedin, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Contact() {
 

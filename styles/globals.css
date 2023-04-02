@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Inter;
+  font-family: Inter, Arial, sans-serif;
   color: white;
 }
 
@@ -32,4 +32,14 @@ a:focus {
 span {
   color: #0080FE;
   font-weight: 600;
+}
+
+.section-box {
+  width: dvw;
+  min-height: 100dvh;
+  padding: 120px 5vw;
+}
+
+p {
+  color: rgb(177, 177, 177);
 }
