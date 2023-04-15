@@ -4,6 +4,7 @@ import Blob from '../components/Blob'
 import { useEffect, useState } from "react"
 import { supabase } from "@/components/supabase"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Projects() {
     const [projects, setProjects] = useState([]);
@@ -39,13 +40,13 @@ export default function Projects() {
 
                     <section className="projects-list">
                         {projects.map(project => (
-                            <div className="project-card" key={project.id}>
+                            <Link rel="noopener noreferrer" target="_blank"  href={project.website_url} className="project-card" key={project.id}>
                                 
                                 <div className="project-preview">
                                     <Image src={project.image_url} layout="fill" className="project-preview" quality={80}/>
                                 </div>
 
-                            </div>
+                            </Link>
                         ))}
                     </section>
                 </section>
