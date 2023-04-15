@@ -94,7 +94,7 @@ nav {
 .my-name-mobile {
     color: #0080FE;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 24px;
     text-shadow: 0px 0px 30px rgba(0, 128, 254, 0.5);
     text-align: right;
 }
@@ -202,6 +202,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(2, 40vw);
     justify-content: space-between;
+    row-gap: 50px;
 }
 
 .project-card {
@@ -289,5 +290,14 @@ nav {
         grid-template-rows: repeat(2, 1fr);
         grid-auto-flow: row;
         row-gap: 15px;
+    }
+
+    .projects-list {
+        grid-template-columns: 90vw;
+    }
+
+    .project-preview, 
+    .project-card {
+        width: 90vw;
     }
 }

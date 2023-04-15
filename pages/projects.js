@@ -45,11 +45,6 @@ export default function Projects() {
                                     <Image src={project.image_url} layout="fill" className="project-preview" quality={80}/>
                                 </div>
 
-                                <div className="project-info">
-                                    <div className="project-title">{project.title}</div>
-                                    <div className="project-description">{project.description}</div>
-                                </div>
-
                             </div>
                         ))}
                     </section>
