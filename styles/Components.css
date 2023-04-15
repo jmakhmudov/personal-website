@@ -40,6 +40,11 @@ nav {
     right: 0;
     left: 0;
     z-index: 100;
+    transition: 0.5s;
+}
+
+.navbar-back {
+    background-color: black;
 }
 
 .nav-links-box {
@@ -210,9 +215,7 @@ nav {
     width: 40vw;
 }
 
-.project-info {
-    
-}
+.project-info {}
 
 .project-title {
     font-weight: 700;
@@ -296,7 +299,7 @@ nav {
         grid-template-columns: 90vw;
     }
 
-    .project-preview, 
+    .project-preview,
     .project-card {
         width: 90vw;
     }

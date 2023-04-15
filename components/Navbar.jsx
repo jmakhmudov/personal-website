@@ -1,10 +1,25 @@
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
     const nav = useRef()
+    const [navbarBack, setnavbarBack] = useState(false);
+
+    useEffect(() => {
+        function handleScroll() {
+            if (window.scrollY > 0) {
+                setnavbarBack(true);
+            } else {
+                setnavbarBack(false);
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const showNavbar = () => {
         nav.current.style.right = 0
@@ -15,7 +30,7 @@ export default function Navbar() {
     }
 
     return (
-        <nav>
+        <nav className={navbarBack ? 'navbar-back' : ''}>
             <Link className="logo" href='/'>
                 JM
             </Link>
