@@ -29,9 +29,9 @@ export default function About() {
                             <div>CSS3</div>
                             <div>JavaScript</div>
                             <div>React JS</div>
+                            <div>Next JS</div>
                             <div>Three JS</div>
                             <div>Figma</div>
-                            <div>Linux</div>
                         </div>
                     </section>
                 </section>
