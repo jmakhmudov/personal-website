@@ -26,7 +26,7 @@ export default function Projects({ projects }) {
                             <Link rel="noopener noreferrer" target="_blank" href={project.website_url} className="project-card" key={project.id}>
 
                                 <div className="project-preview">
-                                    <Image src={project.image_url} layout="fill" className="project-preview" quality={80} />
+                                    <Image src={project.image_url} layout="fill" loading="eager" className="project-preview" />
                                 </div>
 
                             </Link>
