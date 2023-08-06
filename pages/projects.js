@@ -1,28 +1,11 @@
 import Head from "next/head"
 import Navbar from '../components/Navbar'
 import Blob from '../components/Blob'
-import { useEffect, useState } from "react"
 import { supabase } from "@/components/supabase"
 import Image from "next/image"
 import Link from "next/link"
 
-export default function Projects() {
-    const [projects, setProjects] = useState([]);
-
-    useEffect(() => {
-        async function fetchProjects() {
-            const { data, error } = await supabase.from('projects').select('*');
-
-            if (error) {
-                console.error(error);
-            } else {
-                setProjects(data);
-                console.log(data)
-            }
-        }
-
-        fetchProjects();
-    }, []);
+export default function Projects({ projects }) {
 
     return (
         <>
@@ -35,15 +18,15 @@ export default function Projects() {
             <main className="main">
                 <Navbar />
                 <section className="section-box">
-                    
+
                     <div className="title">Projects</div>
 
                     <section className="projects-list">
                         {projects.map(project => (
-                            <Link rel="noopener noreferrer" target="_blank"  href={project.website_url} className="project-card" key={project.id}>
-                                
+                            <Link rel="noopener noreferrer" target="_blank" href={project.website_url} className="project-card" key={project.id}>
+
                                 <div className="project-preview">
-                                    <Image src={project.image_url} layout="fill" className="project-preview" quality={80}/>
+                                    <Image src={project.image_url} layout="fill" className="project-preview" quality={80} />
                                 </div>
 
                             </Link>
@@ -55,4 +38,24 @@ export default function Projects() {
             </main>
         </>
     )
+}
+
+async function fetchProjects() {
+    const { data, error } = await supabase.from('projects').select('*');
+
+    if (error) {
+        console.error(error);
+    } else {
+        return data;
+    }
+}
+
+export async function getServerSideProps() {
+    const data = await fetchProjects();
+
+    return ({
+        props: {
+            projects: data
+        }
+    })
 }
