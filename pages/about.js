@@ -21,19 +21,6 @@ export default function About() {
                         <p>Currently, I am studying at INHA University in Tashkent as a Software Developer. This field is constantly evolving, which means there is always something new to learn and explore.</p>
                         <p>I am excited to see where this journey takes me, and I am committed to working hard and putting in the effort required to achieve my dream of creating something truly amazing and useful for people.</p>
                     </section>
-
-                    <section className="part-box">
-                        <div className="title">Skills</div>
-                        <div className="skills-box">
-                            <div>HTML5</div>
-                            <div>CSS3</div>
-                            <div>JavaScript</div>
-                            <div>React JS</div>
-                            <div>Next JS</div>
-                            <div>Three JS</div>
-                            <div>Figma</div>
-                        </div>
-                    </section>
                 </section>
                 <Blob />
             </main>
